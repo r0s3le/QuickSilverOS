@@ -14,11 +14,9 @@ storage:
       overwrite: true
       contents:
         inline: QuickSilver
-    - path: /etc/systemd/logind.conf
+    - path: /etc/systemd/logind.conf.d/inhibit-suspend.conf
       mode: 0644 
-      overwrite: true 
       contents:
-        inline: 
+        inline: |
+          [Login]
           HandleLidSwitch=ignore
-          HandleLidSwitchExternalPower=ignore 
-          HandleLidSwitchDocked=ignore
