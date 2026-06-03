@@ -28,11 +28,11 @@ systemd:
       enabled: true
 
     # Install necessary packages 
-    - name: rpm-ostree-install-vim.service
+    - name: rpm-ostree-install-first.service
       enabled: true
       contents: |
         [Unit]
-        Description=Layer vim with rpm-ostree
+        Description=Layer install packages on first boot
         Wants=network-online.target
         After=network-online.target
         # We run before `zincati.service` to avoid conflicting rpm-ostree
