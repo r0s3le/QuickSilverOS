@@ -1,0 +1,1 @@
+This project aims to make it easy to start a minimal self hosted home media server using that old laptop you have in your closet collecting dust. Flash a USB with fedora coreos, type a command referencing the raw github file, and profit.
