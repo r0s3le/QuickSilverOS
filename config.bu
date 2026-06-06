@@ -21,6 +21,21 @@ storage:
           [Login]
           HandleLidSwitch=ignore
 
+    # Create directories to mount media and contain docker-compose files
+  directories: 
+    - path: /var/media
+      mode: 0775
+      user:
+        name: core
+      group: 
+        name: media
+    - path: /etc/docker
+      mode: 0771
+      user:
+        name: core
+      group: 
+        name: docker
+
 systemd:
   units:
     #start docker service
